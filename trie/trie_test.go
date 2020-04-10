@@ -12,7 +12,7 @@ func TestTrie(t *testing.T) {
 	for i := 0; i < len(seed); i++ {
 		tr.insert(seed[i])
 	}
-	
+
 	type test struct {
 		w string
 		out bool
