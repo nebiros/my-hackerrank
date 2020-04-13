@@ -10,7 +10,7 @@ type trieNode struct {
 }
 
 // Trie, tree data structure: https://en.wikipedia.org/wiki/Trie.
-// Based on https://golangbyexample.com/trie-implementation-in-go/
+// Based on https://golangbyexample.com/trie-implementation-in-go/.
 type trie struct {
 	root *trieNode
 }
