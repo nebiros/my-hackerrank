@@ -6,6 +6,8 @@ import (
 	"github.com/nebiros/my-hackerrank/heap"
 )
 
+// Max Heap, https://en.wikipedia.org/wiki/Min-max_heap.
+// Based on https://dev.to/dorin/data-structures-in-go-heap-191j.
 type maxHeap struct {
 	*heap.Heap
 }
