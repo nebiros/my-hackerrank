@@ -4,14 +4,14 @@ package quick_sort
 // Based on https://www.bbminfo.com/golang/ds/sort/quick-sort.php.
 func quickSort(arr []int, low int, high int) {
 	if low < high {
-		pivot := doPivot(arr, low, high)
+		pivot := doPartition(arr, low, high)
 
 		quickSort(arr, low, pivot)
 		quickSort(arr, pivot+1, high)
 	}
 }
 
-func doPivot(arr []int, low int, high int) int {
+func doPartition(arr []int, low int, high int) int {
 	pivot := arr[low]
 
 	i := low

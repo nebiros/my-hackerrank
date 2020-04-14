@@ -1,4 +1,4 @@
-package quick_sort
+package quick_sort_rand_pivot
 
 import (
 	"reflect"
@@ -23,15 +23,13 @@ func TestQuickSort(t *testing.T) {
 	t.Parallel()
 
 	for _, c := range testcases {
-		quickSort(c.arr, 0, len(c.arr)-1)
+		actual := quickSort(c.arr)
+		expected := c.out
 
-		if !sort.IntsAreSorted(c.arr) {
-			t.Errorf("%v not sorted", c.arr)
+		if !sort.IntsAreSorted(actual) {
+			t.Errorf("%v not sorted", actual)
 			continue
 		}
-
-		actual := c.arr
-		expected := c.out
 
 		if !reflect.DeepEqual(actual, expected) {
 			t.Errorf("%v != %v", actual, expected)
